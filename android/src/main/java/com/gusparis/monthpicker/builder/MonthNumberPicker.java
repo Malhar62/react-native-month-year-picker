@@ -1,5 +1,7 @@
 package com.gusparis.monthpicker.builder;
 
+import android.view.View;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.DateFormatSymbols;
@@ -23,6 +25,7 @@ class MonthNumberPicker extends MonthYearNumberPicker {
     monthPicker.setFormatter(MonthFormatter.getMonthFormatter(props.mode(), dfs));
     monthPicker.setWrapSelectorWheel(false);
     monthPicker.setValue((DEFAULT_MONTH_SIZE / 2) + props.value().getMonth());
+    monthPicker.setVisibility(!props.showMonth() ? View.GONE : View.VISIBLE);
     // Fix for Formatter blank initial rendering
     try {
       final Method method = monthPicker.getClass().getDeclaredMethod("changeValueByOne", boolean.class);

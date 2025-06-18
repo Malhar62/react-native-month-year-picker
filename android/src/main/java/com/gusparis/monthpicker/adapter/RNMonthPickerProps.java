@@ -25,4 +25,6 @@ public interface RNMonthPickerProps {
   void onChange(int year, int month, int flag);
 
   void onChange();
+
+  Boolean showMonth();
 }

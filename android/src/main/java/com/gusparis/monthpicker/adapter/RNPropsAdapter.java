@@ -17,6 +17,7 @@ import static com.gusparis.monthpicker.adapter.RNProps.MODE;
 import static com.gusparis.monthpicker.adapter.RNProps.NEUTRAL_BUTTON;
 import static com.gusparis.monthpicker.adapter.RNProps.OK_BUTTON;
 import static com.gusparis.monthpicker.adapter.RNProps.VALUE;
+import static com.gusparis.monthpicker.adapter.RNProps.SHOW_MONTH;
 
 public class RNPropsAdapter implements RNMonthPickerProps {
 
@@ -83,6 +84,11 @@ public class RNPropsAdapter implements RNMonthPickerProps {
   @Override
   public Boolean autoTheme() {
     return !props.hasKey(AUTO_THEME.value()) || props.getBoolean(AUTO_THEME.value());
+  }
+  
+  @Override
+  public Boolean showMonth() {
+    return props.getBoolean(SHOW_MONTH.value());
   }
 
   @Override

@@ -14,6 +14,7 @@ const MonthPicker = ({
   onChange,
   minimumDate,
   maximumDate,
+  showMonth = true,
   ...restProps
 }) => {
   invariant(value, 'value prop is required!');
@@ -22,6 +23,7 @@ const MonthPicker = ({
     value: value.getTime(),
     minimumDate: minimumDate?.getTime() ?? null,
     maximumDate: maximumDate?.getTime() ?? null,
+    showMonth,
     ...restProps,
   }).then(
     ({ action, year, month }) => {

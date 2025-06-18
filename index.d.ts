@@ -56,6 +56,10 @@ export interface MonthPickerProps {
     * Default null.
     */
     neutralButton?:string;
+    /**
+     * to hide or show month slider
+     */
+    showMonth?: boolean
 }
 
 declare const MonthPicker: FunctionComponent<MonthPickerProps>;
